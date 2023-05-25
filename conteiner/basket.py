@@ -1,10 +1,8 @@
-from entity.milk import Milk
-from entity.bread import Bread
-from entity.orange import Orange
+from entity.product import Product
 
 
 class Basket:
-    def __init__(self, products=[]):
+    def __init__(self, products=None):
         if products:
             self.__products = products
         else:
@@ -20,11 +18,12 @@ class Basket:
             return self.__products[index]
 
     def add(self, product):
-        if isinstance(product, (Bread, Milk, Orange)):
+        if isinstance(product, Product):
             self.__products.append(product)
 
     def __str__(self):
         msg = "List of products:"
+
         for i in range(self.size):
             msg += f"\n{i + 1}) " + str(self.__products[i])
 

@@ -1,7 +1,7 @@
 from entity.product import Product
 
 
-class Orange:
+class Orange(Product):
     def __init__(self, diameter=100, vitamin=1000, cost=0):
         super().__init__(cost)
         self.__diameter = diameter
