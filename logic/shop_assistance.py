@@ -1,5 +1,5 @@
 from entity.product import Product
-from container.basket import Basket
+from conteiner.basket import Basket
 
 
 class ShopAssistance:
@@ -14,3 +14,5 @@ class ShopAssistance:
                     total += product.price
 
             return total
+        else:
+            return 0
